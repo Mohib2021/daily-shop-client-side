@@ -7,7 +7,7 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <div className="container">
+    <div className="container-fluid">
       <Carousel  interval={2000}>
         <Carousel.Item className=" item-1">
           <img className="imagee img-fluid d-block w-100" src={banner1} alt="First slide" />

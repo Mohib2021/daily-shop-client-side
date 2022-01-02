@@ -1,12 +1,12 @@
 import React from "react";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import GoogleIcon from "@mui/icons-material/Google";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
+// import FacebookIcon from "@mui/icons-material/Facebook";
+// import GoogleIcon from "@mui/icons-material/Google";
+// import TwitterIcon from "@mui/icons-material/Twitter";
+// import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Footer = () => {
   return (
-    <div className="container">
+    <div className="container-fluid p-0">
       <div className="bg-secondary p-3 text-white">
         <div className="py-5 d-lg-flex justify-content-around">
           <div>
@@ -45,10 +45,10 @@ const Footer = () => {
         </div>
         <p>Follow Us</p>
         <p className="d-md-flex justify-content-center">
-          <GoogleIcon sx={{ mr: 2 }}></GoogleIcon>
+          {/* <GoogleIcon sx={{ mr: 2 }}></GoogleIcon>
           <FacebookIcon sx={{ mr: 2 }}></FacebookIcon>
           <TwitterIcon sx={{ mr: 2 }}></TwitterIcon>
-          <InstagramIcon sx={{ mr: 2 }}></InstagramIcon>
+          <InstagramIcon sx={{ mr: 2 }}></InstagramIcon> */}
         </p>
       </div>
       <p className="mb-0 p-3 text-center text-white bg-info">

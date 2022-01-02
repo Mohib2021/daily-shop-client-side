@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import Product from "../../Product/Product";
+import Product from "../Product/Product";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -13,10 +13,9 @@ const Products = () => {
 
   return (
     <div>
-      <Container fluid className="products-area">
+      <Container fluid className="products-area my-5">
         <Row>
-          <Col></Col>
-          <Col md={5}>
+          <Col className="">
             <div className="my-5">
             <h3>Popular Products for Daily Shopping</h3>
             <p>
@@ -26,13 +25,14 @@ const Products = () => {
             </p>
             </div>
           </Col>
-          <Col></Col>
         </Row>
-        <div className="products">
+        <Container>
+        <Row xs={1} md={2} lg={3} className="g-4">
           {products.map((product) => (
             <Product key={product._id} product={product}></Product>
           ))}
-        </div>
+        </Row>
+        </Container>
       </Container>
     </div>
   );

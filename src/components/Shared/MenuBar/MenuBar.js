@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 // import useAuth from "../../../hooks/useAuth";
 import bg from "../../../image/shop logo pic.jpg"
 
@@ -8,7 +8,6 @@ import bg from "../../../image/shop logo pic.jpg"
 const MenuBar = () => {
 //   const { user, logOut } = useAuth();
   return (
-    <div className="container">
       <Navbar
         collapseOnSelect
         expand="lg"
@@ -17,7 +16,7 @@ const MenuBar = () => {
         sticky="top"
       >
         <Container>
-          <Navbar.Brand as={NavLink} to="/home">
+          <Navbar.Brand  to="/home">
             <div className="d-flex align-items-center">
               <img style={{ width: "40px" }} className="me-2" src={bg} alt="" />
               <div>
@@ -30,20 +29,20 @@ const MenuBar = () => {
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Nav className="me-auto">
-              <Nav.Link as={NavLink} to="/home">
+              <Nav.Link  to="/home">
                 Home
               </Nav.Link>
-              <Nav.Link as={NavLink} to="/products">
+              <Nav.Link  to="/products">
                 Products
               </Nav.Link>
               {/* {user?.email && (
                 <>
-                  <Nav.Link as={NavLink} to="/dashboard">
+                  <Nav.Link to="/dashboard">
                     Dashboard
                   </Nav.Link>
                 </>
               )} */}
-              <Nav.Link as={NavLink} to="/contact">
+              <Nav.Link  to="/contact">
                 Contact
               </Nav.Link>
             </Nav>
@@ -74,7 +73,6 @@ const MenuBar = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </div>
   );
 };
 
