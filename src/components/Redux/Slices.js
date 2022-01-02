@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import firebaseInitialization from "../Firebase/Firebase.init";
+firebaseInitialization();
 const initialState = {
 	user: {},
 	userName: "",
@@ -11,7 +13,7 @@ const initialState = {
 
 const auth = getAuth();
 const googleProvider = new GoogleAuthProvider();
-const loginWithGoogle = () => {
+export const loginWithGoogle = () => {
 	return signInWithPopup(auth, googleProvider);
 };
 
