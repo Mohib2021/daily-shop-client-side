@@ -52,7 +52,7 @@ const Footer = () => {
         </p>
       </div>
       <p className="mb-0 p-3 text-center text-white bg-info">
-        Copyright<i className="far fa-copyright"></i> 2022 HandyVai All right
+        Copyright<i className="far fa-copyright"></i> 2022 DailyShop All right
         reserved.
       </p>
     </div>
