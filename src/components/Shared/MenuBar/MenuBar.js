@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import { Badge, Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import style from "./MenuBar.module.css";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+import Badge from "@mui/material/Badge";
+import { styled } from "@mui/material/styles";
+import IconButton from "@mui/material/IconButton";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 function MenuBar() {
 	const [isActive, setIsActive] = useState(false);
-	const element = <FontAwesomeIcon icon={faCoffee} />;
 
 	return (
 		<div className={style.position}>
@@ -46,14 +47,17 @@ function MenuBar() {
 							<button className="btn fw-bold btn-outline-primary">Login</button>
 						</Nav.Link>
 
-						<Nav.Link as={Link} to="/signUp">
+						<Nav.Link as={Link} to="/register">
 							<button className="btn fw-bold btn-outline-primary">
-								SignUp
+								Register
 							</button>
 						</Nav.Link>
-						<Nav.Link as={Link} to="/signUp">
-							<span className="fs-3">{element} </span>
-							<Badge bg="danger">0</Badge>
+						<Nav.Link as={Link} to="/confirmation">
+							<IconButton aria-label="cart">
+								<Badge badgeContent={0} color="success">
+									<ShoppingCartIcon className="text-white fs-3" />
+								</Badge>
+							</IconButton>
 						</Nav.Link>
 					</div>
 					<div
