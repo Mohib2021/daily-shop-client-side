@@ -13,7 +13,7 @@ const initialState = {
 
 const auth = getAuth();
 const googleProvider = new GoogleAuthProvider();
-export const loginWithGoogle = () => {
+const loginWithGoogle = () => {
 	return signInWithPopup(auth, googleProvider);
 };
 
@@ -21,20 +21,20 @@ const userSlice = createSlice({
 	name: "user/slice",
 	initialState,
 	reducers: {
-		getUserName: (state, { payload }) => {
+		setUserName: (state, { payload }) => {
 			state.userName = payload;
 		},
-		getUserEmail: (state, { payload }) => {
+		setUserEmail: (state, { payload }) => {
 			state.userEmail = payload;
 		},
-		getUserPassword: (state, { payload }) => {
+		setUserPassword: (state, { payload }) => {
 			state.userPassword = payload;
 		},
-		getConfirmPassword: (state, { payload }) => {
+		setConfirmPassword: (state, { payload }) => {
 			state.confirmPassword = payload;
 		},
-		googleLogin: (state, { payload }) => {
-			payload
+		googleLogin: (state) => {
+			loginWithGoogle()
 				.then((result) => {
 					const user = result.user;
 					state.user = user;
@@ -47,10 +47,10 @@ const userSlice = createSlice({
 });
 
 export const {
-	getConfirmPassword,
-	getUserEmail,
-	getUserName,
-	getUserPassword,
-	error,
+	setConfirmPassword,
+	setUserEmail,
+	setUserName,
+	setUserPassword,
+	googleLogin,
 } = userSlice.actions;
 export const sliceOfUser = userSlice.reducer;
