@@ -2,10 +2,10 @@ import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 // import useAuth from "../../../hooks/useAuth";
-import bg from "../../image/shop logo pic.jpg"
-// import bg from "../../../components/image/logo/watch.jpg";
+import bg from "../../../image/shop logo pic.jpg"
 
-const Menubar = () => {
+
+const MenuBar = () => {
 //   const { user, logOut } = useAuth();
   return (
     <div className="container">
@@ -78,4 +78,4 @@ const Menubar = () => {
   );
 };
 
-export default Menubar;
+export default MenuBar;
