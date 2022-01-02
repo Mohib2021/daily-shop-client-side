@@ -26,7 +26,7 @@ const Footer = () => {
 
             <p className="fw-bold">Information</p>
             <p>
-              <i className="text-color fas fa-phone-alt"></i> (+0099345000)
+              <i className="text-color fas fa-phone-alt"></i> (+009934500050)
             </p>
             <p>
               <i className="text-color fas fa-mobile-alt"></i> (+8801776145227)
