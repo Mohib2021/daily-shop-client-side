@@ -2,9 +2,9 @@ import React from 'react';
 
 import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
-import Roll from 'react-reveal/Roll';
-import Bounce from 'react-reveal/Bounce'
-import Slide from 'react-reveal/Slide'
+// import Roll from 'react-reveal/Roll';
+// import Bounce from 'react-reveal/Bounce'
+// import Slide from 'react-reveal/Slide'
 
 // import { ThemeContext } from "../../context";
 
@@ -39,18 +39,18 @@ const Contact = () => {
     return (
         <div className="container my-5">
             {/* contact address section */}
-            <Roll left>
-            <h2 className="text-center fw-bold text-warning fw-2 mt-4">Contact With Me</h2></Roll>
+           
+            <h2 className="text-center fw-bold text-success fw-2 mt-4">Contact With Me</h2>
             <div className="row mt-5">
                 <div className=" text-start col-lg-5 col-md-5">
-                <Bounce right>
-                    <h2 className="text-warning">Get In Touch: </h2></Bounce>
-                    <Slide top cascade>
+                
+                    <h2 className="text-success">Get In Touch: </h2>
+                  
 
-                    <div className="right-footer-container  text-white fs-4">
+                    <div className="right-footer-container  fs-4">
 
                         <div className="phone d-flex justify-content-start align-items-start  mt-4">
-                            <div className="all-icon text-warning">
+                            <div className="all-icon text-success">
                                 <i className="fas fa-phone-volume fs-4 me-2"></i>
                             </div>
                             <div>
@@ -58,7 +58,7 @@ const Contact = () => {
                             </div>
                         </div>
                         <div className="phone d-flex justify-content-start align-items-start  mt-4">
-                            <div className="all-icon text-warning">
+                            <div className="all-icon text-success">
                                 <i className="far fa-envelope me-2"></i>
                             </div>
                             <div className="fs-4">
@@ -67,7 +67,7 @@ const Contact = () => {
                         </div>
                       
                     </div>
-                    </Slide>
+                    
                 </div>
                
 
@@ -77,15 +77,15 @@ const Contact = () => {
 
                         <div className="col-12 ">
 
-                            <input type="text" className="form-control bg-dark text-white " id="inputEmail4" name="user_name" placeholder="Enter Your Full-Name" />
+                            <input type="text" className="form-control  text-white " id="inputEmail4" name="user_name" placeholder="Enter Your Full-Name" />
                         </div>
                         <div className="col-12">
 
-                            <input type="email" className="form-control bg-dark text-white" id="inputPassword4" name="user_email" placeholder="Enter Your Email" />
+                            <input type="email" className="form-control  text-white" id="inputPassword4" name="user_email" placeholder="Enter Your Email" />
                         </div>
                         <div className="col-12">
 
-                            <textarea type="text" className="form-control bg-dark text-white" id="inputAddress" name="message" placeholder="Enter Your Message" />
+                            <textarea type="text" className="form-control  text-white" id="inputAddress" name="message" placeholder="Enter Your Message" rows={7} />
                         </div>
 
 
@@ -98,7 +98,7 @@ const Contact = () => {
   <button type="submit" className="btn btn-primary ">Submit</button>
             {done && "Thank you..."} */}
                         <div className="col-12">
-                            <button type="submit" className="btn btn-outline-warning">Submit</button>
+                            <button type="submit" className="btn btn-outline-success">Submit</button>
                             <div>
                                 {done && "Thank you..."
                                 }
