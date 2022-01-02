@@ -54,7 +54,7 @@ function MenuBar() {
 						</Nav.Link>
 						<Nav.Link as={Link} to="/confirmation">
 							<IconButton aria-label="cart">
-								<Badge badgeContent={0} color="success">
+								<Badge badgeContent={"0"} color="success">
 									<ShoppingCartIcon className="text-white fs-3" />
 								</Badge>
 							</IconButton>
