@@ -7,6 +7,7 @@ import Register from "./components/Pages/Register/Register";
 import NotFound from "./components/Pages/404/NotFound";
 function App() {
 	return (
+		// adding react router
 		<Router>
 			<Routes>
 				<Route path="/" element={<Home />} />
