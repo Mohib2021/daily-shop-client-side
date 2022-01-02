@@ -1,79 +1,74 @@
-import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
-// import { NavLink } from "react-router-dom";
-// import useAuth from "../../../hooks/useAuth";
-import bg from "../../../image/shop logo pic.jpg"
+import React, { useState } from "react";
+import { Badge, Container, Nav, Navbar } from "react-bootstrap";
+import style from "./MenuBar.module.css";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
+function MenuBar() {
+	const [isActive, setIsActive] = useState(false);
+	const element = <FontAwesomeIcon icon={faCoffee} />;
 
-const MenuBar = () => {
-//   const { user, logOut } = useAuth();
-  return (
-      <Navbar
-        collapseOnSelect
-        expand="lg"
-        bg="secondary"
-        variant="dark"
-        sticky="top"
-      >
-        <Container>
-          <Navbar.Brand  to="/home">
-            <div className="d-flex align-items-center">
-              <img style={{ width: "40px" }} className="me-2" src={bg} alt="" />
-              <div>
-                <p className="mb-0 lh-1">
-                  DailyShop
-                </p>
-              </div>
-            </div>
-          </Navbar.Brand>
-          <Navbar.Toggle />
-          <Navbar.Collapse className="justify-content-end">
-            <Nav className="me-auto">
-              <Nav.Link  to="/home">
-                Home
-              </Nav.Link>
-              <Nav.Link  to="/products">
-                Products
-              </Nav.Link>
-              {/* {user?.email && (
-                <>
-                  <Nav.Link to="/dashboard">
-                    Dashboard
-                  </Nav.Link>
-                </>
-              )} */}
-              <Nav.Link  to="/contact">
-                Contact
-              </Nav.Link>
-            </Nav>
-            {/* {user?.displayName && (
-              <Navbar.Text>
-                <span className="text-white me-2">{user?.displayName}</span>
-              </Navbar.Text>
-            )}
-            {user?.displayName ? (
-              <button
-                onClick={logOut}
-                className="btn btn-success text-white py-1"
-              >
-                LogOut
-              </button>
-            ) : (
-              <>
-                <Nav.Link as={NavLink} to="/login">
-                  <button className="btn btn-info text-white">LogIn</button>
-                </Nav.Link>
-                <Nav.Link as={NavLink} to="/register">
-                  <button className="btn btn-info text-white">
-                    Register
-                  </button> */}
-                {/* </Nav.Link>
-              </>
-            )} */}
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-  );
-};
+	return (
+		<div className={style.position}>
+			<Navbar bg="dark" variant="dark">
+				<Container>
+					<Navbar.Brand as={Link} to="/home">
+						<div className="d-flex align-items-center">
+							<img
+								className={style.logoImg}
+								src="https://i.ibb.co/sHw3Sfr/daily-shop-logo.png"
+								alt="service-logo"
+							/>
+							<h3 className="ms-2">Daily Shop</h3>
+						</div>
+					</Navbar.Brand>
+					<div
+						className={`ms-auto ${style.navigationLink} ${
+							isActive && style.animation
+						} `}
+					>
+						<Nav.Link className="active" as={Link} to="/home">
+							Home
+						</Nav.Link>
+						<Nav.Link as={Link} to="/explore">
+							Explore
+						</Nav.Link>
+						<Nav.Link as={Link} to="/dashboard">
+							Dashboard
+						</Nav.Link>
+
+						<Nav.Link>
+							<button className="btn fw-bold btn-outline-danger">LogOut</button>
+						</Nav.Link>
+
+						<Nav.Link as={Link} to="/login">
+							<button className="btn fw-bold btn-outline-primary">Login</button>
+						</Nav.Link>
+
+						<Nav.Link as={Link} to="/signUp">
+							<button className="btn fw-bold btn-outline-primary">
+								SignUp
+							</button>
+						</Nav.Link>
+						<Nav.Link as={Link} to="/signUp">
+							<span className="fs-3">{element} </span>
+							<Badge bg="danger">0</Badge>
+						</Nav.Link>
+					</div>
+					<div
+						onClick={() => setIsActive(!isActive)}
+						className={`${style.burger} ${isActive && style.toggle}`}
+					>
+						<div className={style.line1}></div>
+						<div className={style.line2}></div>
+						<div className={style.line3}></div>
+						<div className={style.line4}></div>
+					</div>
+				</Container>
+			</Navbar>
+		</div>
+	);
+}
 
 export default MenuBar;
