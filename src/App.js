@@ -2,7 +2,7 @@
 
 function App() {
 	return (
-		<h1>Hellow</h1>
+		<div>hhh</div>
 	);
 }
 
