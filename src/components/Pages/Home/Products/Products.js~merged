@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import Product from "../Product/Product";
 
 const Products = () => {
+
 	const [products, setProducts] = useState([]);
 
 	useEffect(() => {
@@ -36,6 +37,7 @@ const Products = () => {
 			</Container>
 		</div>
 	);
+
 };
 
 export default Products;
