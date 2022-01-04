@@ -16,7 +16,7 @@ function AllUsers() {
 			role: newRole,
 		};
 
-		fetch(`https://murmuring-lowlands-26250.herokuapp.com/users/${_id}`, {
+		fetch(`https://fierce-plains-01652.herokuapp.com/users/${_id}`, {
 			method: "PUT",
 			headers: {
 				"content-type": "application/json",
@@ -30,7 +30,7 @@ function AllUsers() {
 	};
 
 	useEffect(() => {
-		fetch("https://murmuring-lowlands-26250.herokuapp.com/users")
+		fetch("https://fierce-plains-01652.herokuapp.com/users")
 			.then((res) => res.json())
 			.then((data) => setAllUsers(data));
 	}, [updateUserRole]);

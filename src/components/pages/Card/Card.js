@@ -3,19 +3,19 @@ import { Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import style from "./Card.module.css";
 function Card({ data, deleteService, btnTxt }) {
-	const { photo, name, price, description, _id } = data;
+	const { img, title, price, _id } = data;
 	const navigate = useNavigate();
 
 	return (
 		<Col md={4} sm={12}>
 			<div className={style.card}>
 				<img
-					src={photo.length < 300 ? photo : "data:image/jpeg;base64," + photo}
+					src={img.length < 300 ? img : "data:image/jpeg;base64," + img}
 					className="img-fluid rounded"
 					alt="service"
 				/>
-				<h4 className="mt-2">{name}</h4>
-				<p>{description}</p>
+				<h5 className="my-3">{title}</h5>
+
 				<h5>${price}</h5>
 				<button
 					onClick={() =>

@@ -36,7 +36,7 @@ function Dashboard(props) {
 			<div className="text-center my-3">
 				<img
 					className="w-50"
-					src="https://i.ibb.co/T47rtw9/Screenshot-2021-12-14-235848-removebg-preview.png"
+					src="https://i.ibb.co/sHw3Sfr/daily-shop-logo.png"
 					alt="logo-img"
 				/>
 			</div>

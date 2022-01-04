@@ -5,29 +5,29 @@ import Stack from "@mui/material/Stack";
 import CircularProgress from "@mui/material/CircularProgress";
 
 function HandleService() {
-	const [services, setServices] = useState([]);
+	const [products, setProducts] = useState([]);
 	const handleDeleteService = (_id) => {
-		fetch(`https://murmuring-lowlands-26250.herokuapp.com/services/${_id}`, {
+		fetch(`https://fierce-plains-01652.herokuapp.com/products/${_id}`, {
 			method: "DELETE",
 		})
 			.then((res) => res.json())
 			.then((data) => console.log(data));
 	};
 	useEffect(() => {
-		fetch("https://murmuring-lowlands-26250.herokuapp.com/services")
+		fetch("https://fierce-plains-01652.herokuapp.com/products")
 			.then((res) => res.json())
-			.then((data) => setServices(data));
+			.then((data) => setProducts(data));
 	}, [handleDeleteService]);
 	return (
 		<div className="mb-5">
 			<Container>
 				<div className="my-4 text-center">
 					<h6>Handle </h6>
-					<h3>All Of the Services</h3>
+					<h3>All Of the Products</h3>
 				</div>
-				{services.length ? (
+				{products.length ? (
 					<Row className="g-4">
-						{services.map((service) => (
+						{products.map((service) => (
 							<Card
 								key={service._id}
 								btnTxt="Delete"
