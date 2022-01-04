@@ -6,10 +6,13 @@ import Badge from "@mui/material/Badge";
 import IconButton from "@mui/material/IconButton";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import useAuth from "../../CustomHooks/Context/useAuth";
+import { useSelector } from "react-redux";
 
 function MenuBar() {
 	const [isActive, setIsActive] = useState(false);
 	const { user, logOut } = useAuth();
+	const cartProduct = useSelector((state) => state.userSlice.cart);
+
 	return (
 		<div className={style.position}>
 			<Navbar bg="dark" variant="dark">
@@ -67,7 +70,12 @@ function MenuBar() {
 						)}
 						<Nav.Link as={Link} to="/confirmation">
 							<IconButton aria-label="cart">
-								<Badge badgeContent={"0"} color="success">
+								<Badge
+									badgeContent={`${
+										cartProduct.length ? cartProduct.length : "0"
+									}`}
+									color="success"
+								>
 									<ShoppingCartIcon className="text-white fs-3" />
 								</Badge>
 							</IconButton>

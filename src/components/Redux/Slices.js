@@ -9,6 +9,7 @@ const initialState = {
 	userPassword: "",
 	confirmPassword: "",
 	error: "",
+	cart: [],
 };
 
 const auth = getAuth();
@@ -43,6 +44,9 @@ const userSlice = createSlice({
 					state.error = error.message;
 				});
 		},
+		addToCart: (state, { payload }) => {
+			state.cart.push(payload);
+		},
 	},
 });
 
@@ -52,5 +56,6 @@ export const {
 	setUserName,
 	setUserPassword,
 	googleLogin,
+	addToCart,
 } = userSlice.actions;
 export const sliceOfUser = userSlice.reducer;
