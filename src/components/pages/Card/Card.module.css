@@ -1,0 +1,8 @@
+.card {
+	box-shadow: 0px 0px 10px rgb(187, 187, 187);
+	border-radius: 10px;
+	padding: 9px;
+}
+.card:hover {
+	box-shadow: 2px 2px 15px rgb(155, 155, 155);
+}
