@@ -8,6 +8,7 @@ import NotFound from "./components/Pages/404/NotFound";
 import Confirmation from "./components/Pages/Confirmation/Confirmation";
 import MenuBar from "./components/Shared/MenuBar/MenuBar";
 import Footer from "./components/Shared/Footer/Footer";
+import Explore from "./components/Pages/Explore/Explore";
 function App() {
 	return (
 		// adding react router
@@ -19,6 +20,7 @@ function App() {
 				<Route path="/login" element={<Login />} />
 				<Route path="/register" element={<Register />} />
 				<Route path="/confirmation" element={<Confirmation />} />
+				<Route path="/explore" element={<Explore />} />
 				<Route path="*" element={<NotFound />} />
 			</Routes>
 			<Footer />
