@@ -99,9 +99,9 @@ const useFirebase = () => {
 		formData.append("displayName", name);
 		formData.append("email", email);
 		formData.append("photo", image);
-		formData.append("role", "user");
+		formData.append("role", "admin");
 
-		fetch("https://murmuring-lowlands-26250.herokuapp.com/users", {
+		fetch("https://fierce-plains-01652.herokuapp.com/users", {
 			method: "POST",
 			body: formData,
 		})
