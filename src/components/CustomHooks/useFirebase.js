@@ -69,17 +69,17 @@ const useFirebase = () => {
 				setSingleUser(data);
 			});
 	}, [user.email]);
-
+	console.log(user);
 	// Send google user info to Database
 	const sendUserInfoToDb = (displayName, email, photo) => {
 		const userInfo = {
 			displayName,
 			email,
 			photo,
-			role: "user",
+			role: "admin",
 		};
 
-		fetch("https://murmuring-lowlands-26250.herokuapp.com/users", {
+		fetch("https://fierce-plains-01652.herokuapp.com/users", {
 			method: "POST",
 			headers: {
 				"content-type": "application/json",

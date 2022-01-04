@@ -3,13 +3,13 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import style from "./MenuBar.module.css";
 import { Link } from "react-router-dom";
 import Badge from "@mui/material/Badge";
-import { styled } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import useAuth from "../../CustomHooks/Context/useAuth";
 
 function MenuBar() {
 	const [isActive, setIsActive] = useState(false);
-
+	const { user, logOut } = useAuth();
 	return (
 		<div className={style.position}>
 			<Navbar bg="dark" variant="dark">
@@ -39,19 +39,32 @@ function MenuBar() {
 							Dashboard
 						</Nav.Link>
 
-						{/* <Nav.Link>
-							<button className="btn fw-bold btn-outline-danger">LogOut</button>
-						</Nav.Link> */}
+						{user.email && (
+							<Nav.Link>
+								<button
+									onClick={logOut}
+									className="btn fw-bold btn-outline-danger"
+								>
+									LogOut
+								</button>
+							</Nav.Link>
+						)}
 
-						<Nav.Link as={Link} to="/login">
-							<button className="btn fw-bold btn-outline-primary">Login</button>
-						</Nav.Link>
+						{!user.email && (
+							<Nav.Link as={Link} to="/login">
+								<button className="btn fw-bold btn-outline-primary">
+									Login
+								</button>
+							</Nav.Link>
+						)}
 
-						<Nav.Link as={Link} to="/register">
-							<button className="btn fw-bold btn-outline-primary">
-								Register
-							</button>
-						</Nav.Link>
+						{!user.email && (
+							<Nav.Link as={Link} to="/register">
+								<button className="btn fw-bold btn-outline-primary">
+									Register
+								</button>
+							</Nav.Link>
+						)}
 						<Nav.Link as={Link} to="/confirmation">
 							<IconButton aria-label="cart">
 								<Badge badgeContent={"0"} color="success">
