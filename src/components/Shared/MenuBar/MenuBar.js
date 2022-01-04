@@ -39,9 +39,9 @@ function MenuBar() {
 							Dashboard
 						</Nav.Link>
 
-						<Nav.Link>
+						{/* <Nav.Link>
 							<button className="btn fw-bold btn-outline-danger">LogOut</button>
-						</Nav.Link>
+						</Nav.Link> */}
 
 						<Nav.Link as={Link} to="/login">
 							<button className="btn fw-bold btn-outline-primary">Login</button>

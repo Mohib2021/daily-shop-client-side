@@ -18,9 +18,9 @@ import HandleService from "./components/pages/Dashboard/HandleService/HandleServ
 import AddService from "./components/pages/Dashboard/AddService/AddService";
 import ManageOrder from "./components/pages/Dashboard/ManageOrder/ManageOrder";
 import AllUsers from "./components/pages/Dashboard/AllUsers/AllUsers";
-import AuthProvider, {
-	AuthContext,
-} from "./components/CustomHooks/Context/AuthProvider";
+import AuthProvider from "./components/CustomHooks/Context/AuthProvider";
+
+import Explore from "./components/pages/Explore/Explore";
 
 function App() {
 	return (
@@ -34,7 +34,7 @@ function App() {
 					<Route path="/login" element={<Login />} />
 					<Route path="/register" element={<Register />} />
 					<Route path="/confirmation" element={<Confirmation />} />
-
+					<Route path="/explore" element={<Explore />} />
 					<Route
 						path="/dashboard"
 						element={
