@@ -9,7 +9,7 @@ function ManageOrder() {
 			"Are you sure that you want to delete?"
 		);
 		if (confirmation) {
-			fetch(`https://murmuring-lowlands-26250.herokuapp.com/orders/${_id}`, {
+			fetch(`https://fierce-plains-01652.herokuapp.com/orders/${_id}`, {
 				method: "DELETE",
 			})
 				.then((res) => res.json())
@@ -21,7 +21,7 @@ function ManageOrder() {
 		const update = {
 			status: "Shipped",
 		};
-		fetch(`https://murmuring-lowlands-26250.herokuapp.com/orders/${_id}`, {
+		fetch(`https://fierce-plains-01652.herokuapp.com/orders/${_id}`, {
 			method: "PUT",
 			headers: {
 				"content-type": "application/json",
@@ -34,7 +34,7 @@ function ManageOrder() {
 			});
 	};
 	useEffect(() => {
-		fetch("https://murmuring-lowlands-26250.herokuapp.com/orders")
+		fetch("https://fierce-plains-01652.herokuapp.com/orders")
 			.then((res) => res.json())
 			.then((data) => seTOrderList(data));
 	}, [handleDeleteOrder, updateOrderStatus]);

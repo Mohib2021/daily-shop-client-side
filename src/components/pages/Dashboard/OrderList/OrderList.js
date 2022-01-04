@@ -13,7 +13,7 @@ function OrderList() {
 	const handleCancelOrder = (_id) => {
 		const confirmation = window.confirm("are you sure that you wan to cancel?");
 		if (confirmation) {
-			fetch(`https://murmuring-lowlands-26250.herokuapp.com/orders/${_id}`, {
+			fetch(`https://fierce-plains-01652.herokuapp.com/orders/${_id}`, {
 				method: "DELETE",
 			})
 				.then((res) => res.json())
@@ -22,7 +22,7 @@ function OrderList() {
 	};
 
 	useEffect(() => {
-		fetch("https://murmuring-lowlands-26250.herokuapp.com/orders")
+		fetch("https://fierce-plains-01652.herokuapp.com/orders")
 			.then((res) => res.json())
 			.then((data) => seTOrderList(data));
 	}, [handleCancelOrder]);

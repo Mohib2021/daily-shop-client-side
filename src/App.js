@@ -48,7 +48,7 @@ function App() {
 						<Route path="pay/:payId" element={<Pay />} />
 						<Route path="review" element={<Review />} />
 						<Route
-							path="handleService"
+							path="handleProducts"
 							element={
 								// <PrivetAdminRoute>
 								<HandleService />
@@ -56,7 +56,7 @@ function App() {
 							}
 						/>
 						<Route
-							path="addService"
+							path="addProduct"
 							element={
 								// <PrivetAdminRoute>
 								<AddService />
@@ -64,7 +64,7 @@ function App() {
 							}
 						/>
 						<Route
-							path="manageOrder"
+							path="manageOrders"
 							element={
 								// <PrivetAdminRoute>
 								<ManageOrder />

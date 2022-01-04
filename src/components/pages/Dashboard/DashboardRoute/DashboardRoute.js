@@ -6,9 +6,9 @@ const userDashboardRoute = [
 export const adminDashboardRoute = [
 	{ name: "Home", route: "/home" },
 	{ name: "My Order List", route: "/dashboard/orderList" },
-	{ name: "Handle Service", route: "/dashboard/handleService" },
-	{ name: "Add Service", route: "/dashboard/addService" },
-	{ name: "Manage Booking", route: "/dashboard/manageBooking" },
+	{ name: "Handle Products", route: "/dashboard/handleProducts" },
+	{ name: "Add Service", route: "/dashboard/addProduct" },
+	{ name: "Manage Orders", route: "/dashboard/manageOrders" },
 	{ name: "All Users", route: "/dashboard/allUsers" },
 ];
 export default userDashboardRoute;
